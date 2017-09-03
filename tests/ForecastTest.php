@@ -45,4 +45,16 @@ class ForecastTest extends \PHPUnit_Framework_TestCase {
 			29.92
 		);
 	}
+
+	/**
+	 * 
+	 */
+	public function testDisplay() {
+		$this->Forecast->update(
+			.70,
+			.33,
+			.34
+		);
+		$this->assertTrue(is_string($this->Forecast->display()));
+	}
 }
