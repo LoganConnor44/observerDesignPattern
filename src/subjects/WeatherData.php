@@ -1,6 +1,8 @@
 <?php
 namespace WeatherORama\Subject;
 
+use WeatherORama\Observer\IObserver as IObserver;
+
 /**
  * A concrete subject that pulles from the ISubject interface
  */
@@ -62,7 +64,7 @@ class WeatherData implements ISubject {
 	 */
 	public function notifyObservers() {
 		foreach ($this->Observers as $Observer) {
-			$Observer->update();
+			$Observer->update($this->temperature, $this->humidity, $this->pressure);
 		}
 	}
 

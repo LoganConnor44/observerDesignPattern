@@ -1,6 +1,9 @@
 <?php
 namespace WeatherORama\Display;
 
+use WeatherORama\Observer\IObserver as IObserver;
+use WeatherORama\Subject\ISubject as ISubject;
+
 /**
  * A concrete display which also implements an observer
  */
@@ -25,11 +28,11 @@ class CurrentConditions implements IDisplay, IObserver {
 	private $Subject;
 
 	/**
-	 * Takes a subject interface and assigns it to the class property then regeisters itself
+	 * Takes a subject interface and assigns it to the class property then registers itself
 	 */
 	public function __construct(ISubject $Subject) {
 		$this->Subject = $Subject;
-		$this->Subject->registerObserver(SELF);
+		$this->Subject->addObserver($this);
 	}
 
 	/**
@@ -42,6 +45,7 @@ class CurrentConditions implements IDisplay, IObserver {
 
 	/**
 	 * Sets the given properties to their newly updated values passed arguments
+	 * @return void
 	 */
 	public function update(float $temp, float $humid, float $press) {
 		$this->temperature = $temp;

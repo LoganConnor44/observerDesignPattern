@@ -8,7 +8,9 @@ interface IObserver {
 
 	/**
 	 * An abstract method to update the observers for any object that implements IObserver
-	 * @todo possibly pass in properties from the subject
+	 * @param float $temperature
+	 * @param float $humidity
+	 * @param float $pressure
 	 */
-	public function update();
+	public function update(float $temperature, float $humidity, float $pressure);
 }

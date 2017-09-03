@@ -1,7 +1,10 @@
 <?php
 
-use WeatherORama\Subject\WeatherData;
+use WeatherORama\Subject\WeatherData as WeatherData;
 
+/**
+ * Test class for WeatherData
+ */
 class WeatherDataTest extends \PHPUnit_Framework_TestCase {
 
 	/**
@@ -14,6 +17,9 @@ class WeatherDataTest extends \PHPUnit_Framework_TestCase {
 		$this->assertTrue(is_array($this->WeatherData->Observers));
 	}
 
+	/**
+	 * Verifies that WeatherData properties are being set appropriately
+	 */
 	public function testSetProperties() {
 		$this->WeatherData = new WeatherData();
 		$this->WeatherData->setMeasurements(

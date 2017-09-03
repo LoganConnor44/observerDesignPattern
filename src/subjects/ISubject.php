@@ -1,6 +1,8 @@
 <?php
 namespace WeatherORama\Subject;
 
+use WeatherORama\Observer\IObserver as IObserver;
+
 /**
  * An interface for all subjects to pull from
  */
