@@ -1,5 +1,5 @@
 <?php
-namespace WeatherORama;
+namespace WeatherORama\Observer;
 
 /**
  * An interface for all observers to pull from

@@ -1,5 +1,5 @@
 <?php
-namespace WeatherORama;
+namespace WeatherORama\Subject;
 
 /**
  * An interface for all subjects to pull from

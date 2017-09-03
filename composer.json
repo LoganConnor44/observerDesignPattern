@@ -4,7 +4,10 @@
 	"type": "project",
 	"autoload": {
 		"psr-4": {
-			"WeatherORama\\" : "src/"
+			"WeatherORama\\" : "src/",
+			"WeatherORama\\Observer\\" : "src/observers/",
+			"WeatherORama\\Subject\\" : "src/subjects/",
+			"WeatherORama\\Display\\" : "src/displays/"
 		}
 	},
 	"require-dev": {
