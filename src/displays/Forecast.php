@@ -5,7 +5,7 @@ use WeatherORama\Observer\IObserver as IObserver;
 use WeatherORama\Subject\ISubject as ISubject;
 
 /**
- * A concrete display which also implements an observer
+ * A concrete display which also implements an Observer and Display
  */
 class Forecast implements IDisplay, IObserver {
 
