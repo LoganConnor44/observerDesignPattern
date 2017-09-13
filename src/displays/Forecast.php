@@ -27,6 +27,7 @@ class Forecast implements IDisplay, IObserver {
 
 	/**
 	 * Takes a subject interface and assigns it to the class property then registers itself
+	 * @param ISubject $Subject
 	 */
 	public function __construct(ISubject $Subject) {
 		$this->currentPressure = floatval(29.92);
@@ -50,8 +51,17 @@ class Forecast implements IDisplay, IObserver {
 		return $displayText;
 	}
 
+	/**
+	 * Updates the $lastPressure and $pressure property
+	 * 
+	 * @param float $temperature
+	 * @param float $humidity
+	 * @param float $pressure
+	 * @return void
+	 */ 
 	public function update(float $temperature, float $humidity, float $pressure) {
 		$this->lastPressure = $this->currentPressure;
 		$this->currentPressure = $pressure;
+		$this->display();
 	}
 }

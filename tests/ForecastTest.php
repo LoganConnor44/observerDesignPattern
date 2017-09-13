@@ -47,7 +47,7 @@ class ForecastTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * 
+	 * Verifies the display method returns a string
 	 */
 	public function testDisplay() {
 		$this->Forecast->update(
